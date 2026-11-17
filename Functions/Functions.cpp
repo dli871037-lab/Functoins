@@ -11,11 +11,12 @@ using namespace std;
 
 int getNonZeroCount(const vector<vector<double>>& matrix, int countOfColoumn, int countOfRow) {
   int countNonZeroElements = 0;
-
+  const double& element = matrix[0][0];
+  
   for (int indexInColoumn = 0; indexInColoumn < countOfColoumn; ++indexInColoumn) {
     for (int indexInRow = 0; indexInRow < countOfRow; ++indexInRow) {
-      const double& element = matrix[indexInColoumn][indexInRow];
-
+      element = matrix[indexInColoumn][indexInRow];
+      
       if (element != 0.0) {
         ++countNonZeroElements;
       }
